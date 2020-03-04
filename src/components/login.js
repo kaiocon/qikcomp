@@ -3,6 +3,9 @@ import logo from "../logo2.svg";
 import axios from "axios";
 
 class login extends React.Component {
+
+    state = {user: [], isLoggedin: false};
+
     constructor(props) {
         super(props);
         this.state = {email : '', password: ''};
@@ -22,8 +25,9 @@ class login extends React.Component {
             axios.post('/login', {email, password}).then(result =>{
                 if (result.status === 200){
                     alert('User Logged in!')
-                    this.setState({isLoggedIn: true});
+                    this.setState({ isLoggedIn: true});
                     this.props.history.push('/dashboard');
+
                 }
                 else{
                     alert('Error! Please check email is not already in use!');

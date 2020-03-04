@@ -23,13 +23,16 @@ export default function authCheck(ComponentToProtect) {
             this.state = {
                 loading: true,
                 redirect: false,
-                isLoggedin: false
+                isLoggedin: false,
+                user: []
             };
         }
         componentDidMount() {
-            axios.get('/verifyToken').then(res =>{
+            axios.get('/getUser').then(res =>{
                     if (res.status === 200) {
-                        this.setState({ loading: false, isLoggedin: true });
+                        const data = res.data;
+                        alert("DATA:"+data);
+                        this.setState({ loading: false, isLoggedin: true, user: data });
                     } else {
                         const error = new Error(res.error);
                         throw error;
@@ -48,7 +51,7 @@ export default function authCheck(ComponentToProtect) {
             if (redirect) {
                 return <Redirect to="/login" />;
             }
-            return <ComponentToProtect {...this.props} />;
+            return <ComponentToProtect {...this.props} user={this.state.user} />;
         }
     }
 }
