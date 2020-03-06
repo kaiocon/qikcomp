@@ -31,7 +31,7 @@ export default function authCheck(ComponentToProtect) {
             axios.get('/getUser').then(res =>{
                     if (res.status === 200) {
                         const data = res.data;
-                        alert("DATA:"+data);
+                        //alert("DATA:"+data);
                         this.setState({ loading: false, isLoggedin: true, user: data });
                     } else {
                         const error = new Error(res.error);

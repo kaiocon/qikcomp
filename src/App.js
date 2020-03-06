@@ -9,8 +9,8 @@ import about from './components/about';
 import login from './components/login';
 import register from './components/register';
 import authCheck from "./components/authCheck";
-import axios from "axios";
 import dashboard from "./components/dashboard";
+import profile from "./components/profile";
 
 
 function App() {
@@ -47,6 +47,7 @@ function App() {
               <Route path="/login" component={login} />
               <Route path="/register" component={register} />
               <Route path="/dashboard" component={authCheck((dashboard))} />
+              <Route path="/profile/:id" component={profile}/>
 
 
               <Route path="/" exact component={Home} />

@@ -25,23 +25,34 @@ class dashboard extends React.Component {
         url = '/users/' + this.props.user;
 
         Axios.get(url).then(res =>{
-            alert(res.data.email);
+            //alert(res.data.email);
             this.setState({ loading: false, email: res.data.email, firstName: res.data.firstName, lastName: res.data.lastName, phoneNum: res.data.phoneNum, country: res.data.country, academy: res.data.academy, birthDate: res.data.birthDate.substring(0,10), profileImage: res.data.profileImage});
         })
-    };
+    }
 
     handleImage = (file) => {
         let output;
    let fileReader;
     fileReader = new FileReader();
+    if(file){
     fileReader.readAsDataURL(file);
-        fileReader.onload = () => {
+        fileReader.onloadend = () => {
            output = fileReader.result;
-           alert(output);
-             this.setState({profileImage: output})
+           if(output.substring(0,10) == 'data:image' && output.length < 25000){
+               //alert(output);
+               this.setState({profileImage: output})
+
+           }
+           else if(output.length > 20000){
+               alert('Image file too large!');
+           }
+           else{
+               alert('Invalid file! Format: '+ output.substring(0,10));
+           }
+
         };
 
-    ;
+    };
 
     };
 
@@ -85,10 +96,10 @@ class dashboard extends React.Component {
                         <form className="profile" role="form" onSubmit={this.handleSubmit}>
                             <div className="form-group">
                             <div className="col-sm-6">
-                                <img src={this.state.profileImage} className="avatar img-circle" alt="avatar"/>
+                                <img src={this.state.profileImage} className="profileImage" alt="Profile Image"/>
                                 <h6>Upload a different photo...</h6>
 
-                                <input type="file" className="form-control"  onChange={(e) => this.handleImage(e.target.files[0])}/>
+                                <input type="file" className="form-control" accept='image/*' onChange={(e) => this.handleImage(e.target.files[0])}/>
 
                             </div>
                             </div>

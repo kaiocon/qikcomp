@@ -30,11 +30,11 @@ class login extends React.Component {
 
                 }
                 else{
-                    alert('Error! Please check email is not already in use!');
+                    alert('Error! Please check you are using the correct email and password!');
                 }
             }).catch(err => {
                 console.log(err.message);
-                alert('Error! Please check email is not already in use!');
+                alert('Error! Please check you are using the correct email and password.');
             })
 
     };
