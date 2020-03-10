@@ -41,6 +41,7 @@ class register extends React.Component {
     };
 
     componentDidMount() {
+        document.title = "QikComp";
 
     }
 

@@ -11,6 +11,7 @@ import register from './components/register';
 import authCheck from "./components/authCheck";
 import dashboard from "./components/dashboard";
 import profile from "./components/profile";
+import search from "./components/search";
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
               <Route path="/register" component={register} />
               <Route path="/dashboard" component={authCheck((dashboard))} />
               <Route path="/profile/:id" component={profile}/>
+              <Route path="/search/" component={search}/>
 
 
               <Route path="/" exact component={Home} />

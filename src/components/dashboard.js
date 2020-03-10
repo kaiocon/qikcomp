@@ -27,6 +27,7 @@ class dashboard extends React.Component {
         Axios.get(url).then(res =>{
             //alert(res.data.email);
             this.setState({ loading: false, email: res.data.email, firstName: res.data.firstName, lastName: res.data.lastName, phoneNum: res.data.phoneNum, country: res.data.country, academy: res.data.academy, birthDate: res.data.birthDate.substring(0,10), profileImage: res.data.profileImage});
+            document.title = "QikComp Dashboard - " + this.state.firstName + ' ' + this.state.lastName;
         })
     }
 
@@ -89,8 +90,8 @@ class dashboard extends React.Component {
             <div className="container">
 
             <div className="card" style={{margin: "20px"}}>
+                <h5 className="card-title">Dashboard </h5>
                 <div className="card-body">
-                    <h5 className="card-title">Dashboard </h5>
 
 
                         <form className="profile" role="form" onSubmit={this.handleSubmit}>

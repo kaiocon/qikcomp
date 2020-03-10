@@ -2,13 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2990d9b4-1780-41f4-81f3-b93d5ceb3555" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/browserconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mstile-150x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/safari-pinned-tab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/site.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/flags/Belgium.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/flags/Canada.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/flags/England.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/flags/France.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/flags/Germany.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/flags/Netherlands.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/flags/Scotland.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/flags/USA.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/flags/desktop.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qikcomp-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../qikcomp-backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qikcomp-backend/Models/Academy.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qikcomp-backend/Models/Academy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qikcomp-backend/Models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qikcomp-backend/Models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../qikcomp-backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../qikcomp-backend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/qikcomp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/qikcomp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/authCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authCheck.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +79,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Kai\Desktop\Honours\qikcomp\public" />
       <recent name="C:\Users\Kai\Desktop\Honours\qikcomp\src\images" />
+      <recent name="C:\Users\Kai\Desktop\Honours\qikcomp\public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -116,7 +145,10 @@
       <workItem from="1583253608508" duration="20565000" />
       <workItem from="1583327432443" duration="3098000" />
       <workItem from="1583363247042" duration="645000" />
-      <workItem from="1583424274412" duration="13565000" />
+      <workItem from="1583424274412" duration="16294000" />
+      <workItem from="1583501110783" duration="13183000" />
+      <workItem from="1583849609780" duration="69000" />
+      <workItem from="1583849692323" duration="29000" />
     </task>
     <servers />
   </component>
@@ -135,26 +167,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581087156278" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1580148830360">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1583849714196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580148830360" />
-    <state width="1899" height="284" key="GridCell.Tab.0.bottom" timestamp="1583364550398">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583849714196" />
+    <state width="1899" height="284" key="GridCell.Tab.0.bottom" timestamp="1583849678468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583364550398" />
-    <state width="1899" height="284" key="GridCell.Tab.0.center" timestamp="1583364550398">
+    <state width="1899" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583849678468" />
+    <state width="1899" height="284" key="GridCell.Tab.0.center" timestamp="1583849678468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="284" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583364550398" />
-    <state width="1899" height="284" key="GridCell.Tab.0.left" timestamp="1583364550398">
+    <state width="1899" height="284" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583849678468" />
+    <state width="1899" height="284" key="GridCell.Tab.0.left" timestamp="1583849678468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="284" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583364550398" />
-    <state width="1899" height="284" key="GridCell.Tab.0.right" timestamp="1583364550398">
+    <state width="1899" height="284" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583849678468" />
+    <state width="1899" height="284" key="GridCell.Tab.0.right" timestamp="1583849678468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="284" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583364550398" />
+    <state width="1899" height="284" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583849678468" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1581293331418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

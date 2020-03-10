@@ -46,8 +46,15 @@
    color: #505050;
    font-family: Futura,Helvetica,Arial,sans-serif;
    font-weight: 100;
-  text-align: center;
  }
+.card-title {
+  color: #fff;
+  background-color: #ff4646;
+  width: 100%;
+  padding: 1em;
+  font-family: Futura,Helvetica,Arial,sans-serif;
+  font-weight: 100;
+}
 
 .btn-primary{
   color: #505050;
@@ -192,19 +199,47 @@ footer {
 .btn-lg{
   font-size: 1rem;
 }
-h1{
+.profileH1{
   text-align: center;
   color: #505050;
   font-family: Futura,Helvetica,Arial,sans-serif;
-  margin: 1rem;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 2rem;
+  padding-top: 1em;
+
 }
 .h6, h6 {
   font-size: 1rem;
   display: inline-block;
-  /* margin-left: auto; */
   margin: 1em;
   color: #505050;
   font-weight: 400;
+  text-transform: uppercase;
+}
+.flag {
+  width: 2.1em;
+  box-shadow: 0 0 1px #000000;
+}
+.card-title input{
+  color: red;
+  border: none;
+  width: 100%;
+  margin: 0;
+  height: 100%;
+  height: 60px;
+  width: 100%;
+  padding: 0 16px;
+  border: 0px;
+  border-bottom: 2px solid #d7d7d8;
+  background-color: white;
+  color: #ffffff;
+}
+.card-title input:focus{
+  outline: 0;
+  background-color: #fafafa;
+  border-bottom: 2px solid #89888a;
 }
 @media screen and (max-width: 500px) {
 /* UNDER 500px CSS here */
