@@ -1,4 +1,5 @@
 import React from 'react';
+const check = '<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svgCheck"><path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" class=""></path></svg>';
 
 class about extends React.Component {
 
@@ -11,12 +12,41 @@ class about extends React.Component {
     render() {
         return(
             <div className="container">
-            <div className="card" style={{margin: "20px"}}>
-                <h5 className="card-title">About </h5>
-                <div className="card-body">
-                    <p className="card-text">QikComp aims to be an online tournament management solution for point scoring/by submission combat sports such as Olympic rules Judo. Combat sports are a very popular in modern society and as such there exists completions for all level of athlete and all of which require a significant amount organisation from both event management and athletes. The project comprises the development of a mobile responsive web application capable of helping event organisers and competitors to deal with large information and scheduling tasks expected in such events.
-                    </p>
-                </div></div>
+                <h1 className='aboutTitle'>Features:</h1>
+            <div id='row'>
+                <div className='col-sm-7'></div>
+                <div className="card2">
+                    <div className="header">
+                        <h3 className="title2"><i className="fa fa-address-card"></i>Account Registration</h3>
+                    </div>
+                    <table className="table">
+                        <tbody>
+                        <tr>
+                            <td width="40">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                     className="svgCheck">
+                                    <path fill="currentColor"
+                                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+                                          className="checkIcon"></path>
+                                </svg></td>
+                            <td>Automatic seeding <span className="muted">with optimal club seperation</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td width="40"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                className="svgCheck">
+                                <path fill="currentColor"
+                                      d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+                                      className="checkIcon"></path>
+                            </svg></td>
+                            <td>Manual seeding</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
             </div>
         )
     }

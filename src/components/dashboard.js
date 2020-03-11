@@ -27,6 +27,9 @@ class dashboard extends React.Component {
         Axios.get(url).then(res =>{
             //alert(res.data.email);
             this.setState({ loading: false, email: res.data.email, firstName: res.data.firstName, lastName: res.data.lastName, phoneNum: res.data.phoneNum, country: res.data.country, academy: res.data.academy, birthDate: res.data.birthDate.substring(0,10), profileImage: res.data.profileImage});
+            Axios.get('/academy/' + this.state.academy).then(res =>{
+                this.setState({academy: res.data.name});
+            })
             document.title = "QikComp Dashboard - " + this.state.firstName + ' ' + this.state.lastName;
         })
     }

@@ -21,6 +21,9 @@ class profile extends React.Component {
         Axios.get(url).then(res =>{
             //alert(res.data.email);
             this.setState({ loading: false, firstName: res.data.firstName, lastName: res.data.lastName, country: res.data.country, academy: res.data.academy, age: res.data.age , profileImage: res.data.profileImage});
+            Axios.get('/academy/' + this.state.academy).then(res =>{
+                this.setState({academy: res.data});
+            })
             document.title = "QikComp Profile - " + this.state.firstName + ' ' + this.state.lastName;
         });
 
@@ -41,7 +44,7 @@ class profile extends React.Component {
 
                     <h6>Nation: <strong>{this.state.country}</strong></h6>
                     <h6>Age:  <strong>{this.state.age}</strong></h6><br/>
-                    <h6>Academy:  <strong>{this.state.academy}</strong></h6>
+                    <h6>Academy:  <br/><a href={'/academy/' + this.state.academy._id}><img src={this.state.academy.profileImage} className='profileImage'/></a><a href={'/academy/' + this.state.academy._id}>{this.state.academy.name}</a></h6>
 
                 </div>
                 <div className="card" style={{margin: "20px"}}>

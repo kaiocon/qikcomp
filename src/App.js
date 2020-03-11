@@ -12,6 +12,7 @@ import authCheck from "./components/authCheck";
 import dashboard from "./components/dashboard";
 import profile from "./components/profile";
 import search from "./components/search";
+import academyProfile from "./components/academyProfile";
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
           <div className="row">
               <div className="col-sm-12">
                   <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                      <a className="navbar-brand" href="/"><img src={logo} className="logo"/></a>
+                      <Link className="navbar-brand" to="/"><img src={logo} className="logo"/></Link>
                       <ul className="navbar-nav">
                           <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
                           <li className="nav-item"><Link className="nav-link" to="/dashboard">Dashboard</Link></li>
@@ -49,6 +50,7 @@ function App() {
               <Route path="/register" component={register} />
               <Route path="/dashboard" component={authCheck((dashboard))} />
               <Route path="/profile/:id" component={profile}/>
+              <Route path="/academy/:id" component={academyProfile}/>
               <Route path="/search/" component={search}/>
 
 
@@ -61,9 +63,9 @@ function App() {
       </Router>
       </div>
           <footer>
-              <a href="#" className="fa fa-facebook"></a>
-              <a href="#" className="fa fa-twitter"></a>
-              <a href="#" className="fa fa-instagram"></a><br/>
+              <a href="#" className="fa fa-facebook social"></a>
+              <a href="#" className="fa fa-twitter social"></a>
+              <a href="#" className="fa fa-instagram social"></a><br/>
               <small>QIKCOMP © 2020<br/>
                   Privacy Statement.</small>
           </footer>
