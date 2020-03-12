@@ -29,15 +29,15 @@ export default function authCheck(ComponentToProtect) {
         }
         componentDidMount() {
             axios.get('/getUser').then(res =>{
-                    if (res.status === 200) {
-                        const data = res.data;
-                        //alert("DATA:"+data);
-                        this.setState({ loading: false, isLoggedin: true, user: data });
-                    } else {
-                        const error = new Error(res.error);
-                        throw error;
-                    }
-                })
+                if (res.status === 200) {
+                    const data = res.data;
+                    //alert("DATA:"+data);
+                    this.setState({ loading: false, isLoggedin: true, user: data });
+                } else {
+                    const error = new Error(res.error);
+                    throw error;
+                }
+            })
                 .catch(err => {
                     console.error(err);
                     this.setState({ loading: false, redirect: true, isLoggedin: false });
@@ -53,5 +53,4 @@ export default function authCheck(ComponentToProtect) {
             }
             return <ComponentToProtect {...this.props} user={this.state.user} />;
         }
-    }
-}
+    }}

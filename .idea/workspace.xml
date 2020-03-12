@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2990d9b4-1780-41f4-81f3-b93d5ceb3555" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/images/score.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/user-edit-solid.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/features.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/features.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authCheck.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +118,7 @@
       <workItem from="1583849609780" duration="69000" />
       <workItem from="1583849692323" duration="29000" />
       <workItem from="1583849765760" duration="28461000" />
-      <workItem from="1584023562866" duration="8502000" />
+      <workItem from="1584023562866" duration="14593000" />
     </task>
     <servers />
   </component>
