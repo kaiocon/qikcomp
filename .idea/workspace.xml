@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2990d9b4-1780-41f4-81f3-b93d5ceb3555" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/affiliationProfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/createAcademy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/getAcademies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/getCompetitors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/academyProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/academyProfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/authCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authCheck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +43,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Internet Tech/project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -46,6 +52,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kai\Desktop\Honours\qikcomp\src\components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kai\Desktop\Honours\qikcomp\src\images" />
       <recent name="C:\Users\Kai\Desktop\Honours\qikcomp\public" />
@@ -118,7 +127,9 @@
       <workItem from="1583849609780" duration="69000" />
       <workItem from="1583849692323" duration="29000" />
       <workItem from="1583849765760" duration="28461000" />
-      <workItem from="1584023562866" duration="14593000" />
+      <workItem from="1584023562866" duration="18598000" />
+      <workItem from="1584109215467" duration="11202000" />
+      <workItem from="1584463954017" duration="10775000" />
     </task>
     <servers />
   </component>
@@ -141,22 +152,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583849714196" />
-    <state width="1899" height="284" key="GridCell.Tab.0.bottom" timestamp="1583977430267">
+    <state width="1899" height="239" key="GridCell.Tab.0.bottom" timestamp="1584498599737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583977430267" />
-    <state width="1899" height="284" key="GridCell.Tab.0.center" timestamp="1583977430267">
+    <state width="1899" height="239" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584498599737" />
+    <state width="1899" height="239" key="GridCell.Tab.0.center" timestamp="1584498599737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="284" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583977430267" />
-    <state width="1899" height="284" key="GridCell.Tab.0.left" timestamp="1583977430266">
+    <state width="1899" height="239" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584498599737" />
+    <state width="1899" height="239" key="GridCell.Tab.0.left" timestamp="1584498599737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="284" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583977430266" />
-    <state width="1899" height="284" key="GridCell.Tab.0.right" timestamp="1583977430267">
+    <state width="1899" height="239" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584498599737" />
+    <state width="1899" height="239" key="GridCell.Tab.0.right" timestamp="1584498599737">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="284" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583977430267" />
+    <state width="1899" height="239" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584498599737" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1581293331418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

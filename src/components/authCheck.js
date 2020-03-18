@@ -28,7 +28,7 @@ export default function authCheck(ComponentToProtect) {
             };
         }
         componentDidMount() {
-            axios.get('/getUser').then(res =>{
+            axios.get('/getUser/').then(res =>{
                 if (res.status === 200) {
                     const data = res.data;
                     //alert("DATA:"+data);

@@ -1,6 +1,8 @@
 import React from 'react';
 import Axios from 'axios';
-import base64 from 'image-to-base64';
+import CreateAcademy from './createAcademy';
+import Login from "./login";
+import props from 'prop-types';
 let url = '';
 class dashboard extends React.Component {
 
@@ -15,9 +17,9 @@ class dashboard extends React.Component {
             country: '',
             academy: '',
             birthDate: '',
+            adminPermissions: '',
+            manages: '',
             profileImage: ''};
-
-        //this.handleSubmit = this.handleSubmit.bind(this);
     }
 
 
@@ -26,7 +28,7 @@ class dashboard extends React.Component {
 
         Axios.get(url).then(res =>{
             //alert(res.data.email);
-            this.setState({ loading: false, email: res.data.email, firstName: res.data.firstName, lastName: res.data.lastName, phoneNum: res.data.phoneNum, country: res.data.country, academy: res.data.academy, birthDate: res.data.birthDate.substring(0,10), profileImage: res.data.profileImage});
+            this.setState({ loading: false, email: res.data.email, firstName: res.data.firstName, lastName: res.data.lastName, phoneNum: res.data.phoneNum, country: res.data.country, academy: res.data.academy, birthDate: res.data.birthDate.substring(0,10), profileImage: res.data.profileImage, adminPermissions: res.data.adminPermissions, manages: res.data.manages});
             Axios.get('/academy/' + this.state.academy).then(res =>{
                 this.setState({academy: res.data.name});
             })
@@ -91,12 +93,9 @@ class dashboard extends React.Component {
         return(
 
             <div className="container">
-
             <div className="card" style={{margin: "20px"}}>
                 <h5 className="card-title">Dashboard </h5>
                 <div className="card-body">
-
-
                         <form className="profile" role="form" onSubmit={this.handleSubmit}>
                             <div className="form-group">
                             <div className="col-sm-6">
@@ -175,7 +174,7 @@ class dashboard extends React.Component {
                 </div>
 
 
-
+<CreateAcademy {...props} manages={this.state.manages}/>
             </div>
         )
     }

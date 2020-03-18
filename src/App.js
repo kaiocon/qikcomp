@@ -14,6 +14,8 @@ import dashboard from "./components/dashboard";
 import profile from "./components/profile";
 import search from "./components/search";
 import academyProfile from "./components/academyProfile";
+import affiliationProfile from "./components/affiliationProfile";
+import props from 'prop-types';
 
 
 function App() {
@@ -37,9 +39,10 @@ function App() {
                                     <ul className="navbar-nav">
                                         <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
                                         <li className="nav-item"><Link className="nav-link" to="/dashboard">Dashboard</Link></li>
-                                        {isLoggedIn ? '' : <li className="nav-item"><Link className="nav-link" to="/login">Login</Link></li>}
-                                        {isLoggedIn ? '' : <li className="nav-item"><Link className="nav-link" to="/register">Register</Link></li>}
 
+                                        {isLoggedIn.isLoggedIn ? '' : <li className="nav-item"><Link className="nav-link" to="/login">Login</Link></li>}
+                                        {isLoggedIn.isLoggedIn ? '' : <li className="nav-item"><Link className="nav-link" to="/register">Register</Link></li>}
+                                        {isLoggedIn.isLoggedIn ? <li className="nav-item"><Link className="nav-link" onClick={() =>{handleHook(false)}}>Logout</Link></li> : ''}
                                         <hr/>
                                     </ul>
                                     <div className='burger'>
@@ -53,11 +56,12 @@ function App() {
                     <Switch>
 
                         <Route path="/about" component={about} />
-                        <Route path="/login" component={() => <Login handleHook={handleHook} isLoggedIn={isLoggedIn} />}/>
+                        <Route path="/login" component={() => <Login handleHook={handleHook}  {...props} isLoggedIn={isLoggedIn} />}/>
                         <Route path="/register" component={register} />
                         <Route path="/dashboard" component={authCheck((dashboard))} />
                         <Route path="/profile/:id" component={profile}/>
                         <Route path="/academy/:id" component={academyProfile}/>
+                        <Route path="/affiliation/:id" component={affiliationProfile}/>
                         <Route path="/search/" component={search}/>
 
 

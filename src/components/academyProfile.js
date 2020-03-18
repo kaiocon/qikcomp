@@ -1,7 +1,9 @@
 import React from "react";
 import Axios from "axios";
+import GetCompetitors from './getCompetitors';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import Geocode from "react-geocode";
+import GetAcademies from "./getAcademies";
 let url = '';
 
 // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
@@ -63,8 +65,7 @@ class academyProfile extends React.Component {
                     <h6>Nation: <strong>{this.state.country}</strong></h6>
                     <h6>Instructor:  <strong>{this.state.instructor}</strong></h6><br/>
                     <h6>Affiliation:  <strong>{this.state.affiliation}</strong></h6>
-                    <h6>Competitors:  <strong>{this.state.competitors}</strong></h6>
-
+                    <h6>Competitors:  <strong>{this.state.competitors.length}</strong></h6>
                 </div>
                 <div className="card" style={{margin: "20px"}}>
 
@@ -92,6 +93,9 @@ class academyProfile extends React.Component {
                             <p><span className='faded'>About</span> <br/> {this.state.about}</p>
                         </span>
                     </div></div>
+                <div className="card-body">
+                    <GetCompetitors competitors={this.state.competitors}/>
+                </div>
             </div>
         )
     }
