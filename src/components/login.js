@@ -43,7 +43,7 @@ class login extends React.Component {
     };
     render() {
         return(
-            <div className="container">
+            <div className="container mob">
                 <div className="card" style={{margin: "20px"}}>
                     <div className="card-body">
 

@@ -21,7 +21,7 @@ class getAffiliations extends React.Component {
 
     render() {
         return(
-            <select className="form-control" onChange={this.props.handleAffiliation}>
+            <select className="form-control"  onChange={this.props.handleAffiliation}>
 
             {this.state.affiliations.map(affiliation => <option value={affiliation._id}>{affiliation.name}</option>)}
            </select>

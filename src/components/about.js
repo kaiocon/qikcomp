@@ -11,11 +11,14 @@ class about extends React.Component {
 
     render() {
         return(
-            <div className="container">
+            <div className="container mob">
                 <h1 className='aboutTitle'>Features:</h1>
 
             <div id='row'>
-                <div className='col-sm-5'>Hi</div>
+                <div className='col-sm-5 float-right'>
+                    <iframe className='vid' src="https://www.youtube.com/embed/GTgL9h4ptCE" frameBorder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen></iframe></div>
                 <div className='col-sm-7'>
 
                     <div className="card2">

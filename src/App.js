@@ -19,10 +19,17 @@ import props from 'prop-types';
 
 
 function App() {
-    const [isLoggedIn, setIsLoggedIn] = useState({isLoggedIn: false});
+    const [hook, setHook] = useState({isBurgerOpen: false});
+    const [hookLogin, setHookLogin] = useState({isLoggedIn: false});
     const handleHook = (value) => {
-        setIsLoggedIn({isLoggedIn: value});
+        setHookLogin({isLoggedIn: value});
 
+    };
+    const handleBurger = () =>{
+        setHook({isBurgerOpen: !hook.isBurgerOpen})
+    };
+    const handleLink = () =>{
+        setHook({isBurgerOpen: false})
     };
 
     return (
@@ -34,18 +41,18 @@ function App() {
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-12 stickyMenu">
-                                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                                <nav className="navbar navbar-expand-lg navbar-light bg-light" >
                                     <Link className="navbar-brand" to="/"><img src={logo} className="logo"/></Link>
-                                    <ul className="navbar-nav">
-                                        <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
-                                        <li className="nav-item"><Link className="nav-link" to="/dashboard">Dashboard</Link></li>
+                                    <ul className="navbar-nav" style={{display: hook.isBurgerOpen && 'block' }}>
+                                        <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/about">About</Link></li>
+                                        <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/dashboard">Dashboard</Link></li>
 
-                                        {isLoggedIn.isLoggedIn ? '' : <li className="nav-item"><Link className="nav-link" to="/login">Login</Link></li>}
-                                        {isLoggedIn.isLoggedIn ? '' : <li className="nav-item"><Link className="nav-link" to="/register">Register</Link></li>}
-                                        {isLoggedIn.isLoggedIn ? <li className="nav-item"><Link className="nav-link" onClick={() =>{handleHook(false)}}>Logout</Link></li> : ''}
+                                        {hookLogin.isLoggedIn ? '' : <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/login">Login</Link></li>}
+                                        {hookLogin.isLoggedIn ? '' : <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/register">Register</Link></li>}
+                                        {hookLogin.isLoggedIn ? <li className="nav-item"><Link className="nav-link" onClick={() =>{handleHook(false)}}>Logout</Link></li> : ''}
                                         <hr/>
                                     </ul>
-                                    <div className='burger'>
+                                    <div className='burger' onClick={handleBurger}>
                                         <span className='bars'></span>
                                     </div>
                                 </nav>
@@ -56,7 +63,7 @@ function App() {
                     <Switch>
 
                         <Route path="/about" component={about} />
-                        <Route path="/login" component={() => <Login handleHook={handleHook}  {...props} isLoggedIn={isLoggedIn} />}/>
+                        <Route path="/login" component={() => <Login handleHook={handleHook}  {...props} isLoggedIn={hook.isLoggedIn} />}/>
                         <Route path="/register" component={register} />
                         <Route path="/dashboard" component={authCheck((dashboard))} />
                         <Route path="/profile/:id" component={profile}/>

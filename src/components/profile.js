@@ -37,14 +37,14 @@ class profile extends React.Component {
         }
         return(
 
-            <div className="container">
+            <div className="container mob">
                 <img src={this.state.profileImage} className='profileImage2'/>
                 <h1 className='profileH1'><img src={require('../images/flags/'+this.state.country +'.svg')} className='flag'/> {this.state.firstName + ' ' + this.state.lastName}</h1>
                 <div className='profile'>
 
                     <h6>Nation: <strong>{this.state.country}</strong></h6>
                     <h6>Age:  <strong>{this.state.age}</strong></h6><br/>
-                    <h6>Academy:  <br/><a href={'/academy/' + this.state.academy._id}><img src={this.state.academy.profileImage} className='profileImage'/></a><a href={'/academy/' + this.state.academy._id}>{this.state.academy.name}</a></h6>
+                    <h6>Academy:  <br/><a href={'/academy/' + this.state.academy._id}><img src={this.state.academy.profileImage} className='profileImage p1'/></a><a href={'/academy/' + this.state.academy._id}>{this.state.academy.name}</a></h6>
 
                 </div>
                 <div className="card" style={{margin: "20px"}}>

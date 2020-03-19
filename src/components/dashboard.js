@@ -99,7 +99,7 @@ class dashboard extends React.Component {
         }
         return(
 
-            <div className="container">
+            <div className="container mob">
             <div className="card" style={{margin: "20px"}}>
                 <h5 className="card-title"><Link to='#' onClick={() =>{this.setState({dash: true, acad: false, afil: false})}}>Dashboard</Link> | <Link to='#'  onClick={() =>{this.setState({dash: false, acad: true, afil: false})}}>Academy</Link>  | <Link to='#' onClick={() =>{this.setState({dash: false, acad: false, afil: true})}}>Affiliation</Link></h5>
                 {this.state.acad ? <CreateAcademy {...props} manages={this.state.manages}/> : ''}

@@ -1,6 +1,7 @@
 import React from "react";
 import Axios from "axios";
 import GetAcademies from "./getAcademies";
+import GetCompetitors from "./getCompetitors";
 let url = '';
 
 
@@ -39,7 +40,7 @@ class affiliationProfile extends React.Component {
         }
         return(
 
-            <div className="container">
+            <div className="container mob">
                 <img src={this.state.profileImage} className='profileImage2'/>
                 <h1 className='profileH1'>{this.state.name}</h1>
                 <div className='profile'>
@@ -50,14 +51,10 @@ class affiliationProfile extends React.Component {
                     <div className="card-body">
                         <span className="card-text">
                             <p><span className='faded'>About</span> <br/> {this.state.about}</p>
-                            <div className="card" style={{margin: "20px"}}>
-                    <h5 className="card-title">Academies</h5>
-                    <div className="card-body">
-                        <GetAcademies academies={this.state.academies}/>
-                    </div></div>
-
                         </span>
-                    </div></div>
+                    </div>
+                    <p style={{padding: '0em 1.25em'}}><span className='faded'>Academies:</span><br/><GetAcademies academies={this.state.academies}/></p>
+                </div>
             </div>
         )
     }

@@ -33,6 +33,8 @@ class academyProfile extends React.Component {
         Axios.get(url).then(res =>{
             //alert(res.data.email);
             this.setState({ loading: false, name: res.data.name, address: res.data.address, country: res.data.country, phoneNum: res.data.phoneNum, instructor: res.data.instructor , profileImage: res.data.profileImage, about: res.data.about, competitors: res.data.competitors, affiliation: res.data.affiliation, website: res.data.website});
+            Axios.get('/affiliation/' + this.state.affiliation).then(res =>{
+                let aff = []; aff.push(res.data._id, res.data.name, res.data.profileImage); this.setState({affiliation: aff})});
             document.title = "QikComp Academy Profile - " + this.state.name;
 
             Geocode.fromAddress(this.state.address).then(
@@ -57,15 +59,15 @@ class academyProfile extends React.Component {
         }
         return(
 
-            <div className="container">
+            <div className="container mob">
                 <img src={this.state.profileImage} className='profileImage2'/>
                 <h1 className='profileH1'><img src={require('../images/flags/'+this.state.country +'.svg')} className='flag'/> {this.state.name}</h1>
                 <div className='profile'>
 
                     <h6>Nation: <strong>{this.state.country}</strong></h6>
                     <h6>Instructor:  <strong>{this.state.instructor}</strong></h6><br/>
-                    <h6>Affiliation:  <strong>{this.state.affiliation}</strong></h6>
-                    <h6>Competitors:  <strong>{this.state.competitors.length}</strong></h6>
+                    <h6>Competitors:  <strong>{this.state.competitors.length}</strong></h6><br/>
+                    <h6>Affiliation:  <a href={'/affiliation/'+this.state.affiliation[0]}><img className='profileImage p1' src={this.state.affiliation[2]}/><strong>{this.state.affiliation[1]}</strong></a></h6>
                 </div>
                 <div className="card" style={{margin: "20px"}}>
 
@@ -92,9 +94,9 @@ class academyProfile extends React.Component {
                             <p><span className='faded'>Website</span><br/>  <a href={'http://'+this.state.website}>{this.state.website}</a></p>
                             <p><span className='faded'>About</span> <br/> {this.state.about}</p>
                         </span>
-                    </div></div>
-                <div className="card-body">
-                    <GetCompetitors competitors={this.state.competitors}/>
+                    </div>
+                    <p style={{padding: '0em 1.25em'}}><span className='faded'>Team:</span><br/><GetCompetitors competitors={this.state.competitors}/></p>
+
                 </div>
             </div>
         )
