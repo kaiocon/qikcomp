@@ -1,5 +1,6 @@
 import React from 'react';
 import Axios from "axios";
+import GetAffiliations from './getAffiliations';
 const defImg = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkBAMAAACCzIhnAAAAG1BMVEXMzMyWlpacnJy+vr6jo6PFxcW3t7eqqqqxsbHbm8QuAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAiklEQVRYhe3QMQ6EIBAF0C+GSInF9mYTs+1ewRsQbmBlayysKefYO2asXbbYxvxHQj6ECQMAEREREf2NQ/fCtp5Zky6vtRMkSJEzhyISynWJnzH6Z8oQlzS7lEc/fLmmQUSvc16OrCPqRl1JePxQYo1ZSWVj9nxrrOb5esw+eXdvzTWfTERERHRXH4tWFZGswQ2yAAAAAElFTkSuQmCC';
 
 class createAcademy extends React.Component {
@@ -38,6 +39,7 @@ class createAcademy extends React.Component {
         Axios.post('/createAcademy', {name, address, instructor, phoneNum, country, website, about, affiliation, profileImage}).then(result =>{
             if (result.status === 200){
                 alert('Academy Created!');
+                this.setState(this.state);
 
             }
             else{
@@ -99,6 +101,7 @@ class createAcademy extends React.Component {
 
     };
 
+
     render() {
         const {loading} = this.state;
         if (loading) {
@@ -107,8 +110,6 @@ class createAcademy extends React.Component {
         return(
 
 
-                <div className="card" style={{margin: "20px"}}>
-                    <h5 className="card-title">Create Academy</h5>
                     <div className="card-body">
 
                         <form className="profile" role="form">
@@ -142,7 +143,7 @@ class createAcademy extends React.Component {
                             <div className="form-group">
                                 <label className="col-md-3 control-label">About:</label>
                                 <div className="col-sm-6">
-                                    <input className="form-control" type="text" value={this.state.about}  onChange={(e) => this.setState({ about: e.target.value })}/>
+                                    <textarea className="form-control" type="text" value={this.state.about}  onChange={(e) => this.setState({ about: e.target.value })}/>
                                 </div>
                             </div>
                             <div className="form-group">
@@ -155,11 +156,10 @@ class createAcademy extends React.Component {
                                 <label className="col-lg-3 control-label">Country:</label>
                                 <div className="col-sm-6">
                                     <div className="ui-select">
-                                        <select id="user_time_zone" className="form-control" value={this.state.country} onChange={(e) => this.setState({ country: e.target.value })}>
+                                        <select className="form-control" value={this.state.country} onChange={(e) => this.setState({ country: e.target.value })}>
                                             <option value="Scotland">Scotland</option>
                                             <option value="England">England</option>
-                                            <option value="USA">USA
-                                            </option>
+                                            <option value="USA">USA</option>
                                             <option value="Belgium">Belgium</option>
                                             <option value="Netherlands">Netherlands</option>
                                             <option value="France">France</option>
@@ -172,7 +172,9 @@ class createAcademy extends React.Component {
                             <div className="form-group">
                                 <label className="col-md-3 control-label">Affiliation:</label>
                                 <div className="col-sm-6">
-                                    <input className="form-control" type="text" value={this.state.affiliation}  onChange={(e) => this.setState({ affiliation: e.target.value })}/>
+                                    <div className="ui-select">
+                                           <GetAffiliations  handleAffiliation={(e) => this.setState({ affiliation: e.target.value })}/>
+                                    </div>
                                 </div>
                             </div>
                             <div className="form-group">
@@ -193,7 +195,6 @@ class createAcademy extends React.Component {
 
                         </form>
                     </div>
-                </div>
 
 
         )
