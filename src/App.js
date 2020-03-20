@@ -19,11 +19,15 @@ import props from 'prop-types';
 
 
 function App() {
+
     const [hook, setHook] = useState({isBurgerOpen: false});
     const [hookLogin, setHookLogin] = useState({isLoggedIn: false});
-    const handleHook = (value) => {
-        setHookLogin({isLoggedIn: value});
 
+    const handleHook = (value) => {
+        if (value === false){
+            localStorage.removeItem('loginCookie');
+        }
+        setHookLogin({isLoggedIn: value});
     };
     const handleBurger = () =>{
         setHook({isBurgerOpen: !hook.isBurgerOpen})
@@ -63,7 +67,7 @@ function App() {
                     <Switch>
 
                         <Route path="/about" component={about} />
-                        <Route path="/login" component={() => <Login handleHook={handleHook}  {...props} isLoggedIn={hook.isLoggedIn} />}/>
+                        <Route path="/login" component={() => <Login handleHook={handleHook}  {...props} isLoggedIn={hookLogin.isLoggedIn} />}/>
                         <Route path="/register" component={register} />
                         <Route path="/dashboard" component={authCheck((dashboard))} />
                         <Route path="/profile/:id" component={profile}/>

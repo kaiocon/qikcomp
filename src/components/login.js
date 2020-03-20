@@ -28,6 +28,7 @@ class login extends React.Component {
             if (result.status === 200){
                 //alert('User Logged in!')
                 this.setState({ isLoggedIn: true});
+                localStorage.setItem('loginCookie', email.toLowerCase());
                 this.props.handleHook(true);
                 this.props.history.push('/dashboard');
 

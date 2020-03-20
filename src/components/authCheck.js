@@ -29,7 +29,8 @@ export default function authCheck(ComponentToProtect) {
         }
         componentDidMount() {
             axios.get('/getUser/').then(res =>{
-                if (res.status === 200) {
+                let local = localStorage.getItem("loginCookie");
+                if (res.status === 200 && local === res.data) {
                     const data = res.data;
                     //alert("DATA:"+data);
                     this.setState({ loading: false, isLoggedin: true, user: data });
