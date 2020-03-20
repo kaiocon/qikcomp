@@ -19,7 +19,7 @@ import props from 'prop-types';
 
 
 function App() {
-
+    const local = localStorage.getItem('loginCookie');
     const [hook, setHook] = useState({isBurgerOpen: false});
     const [hookLogin, setHookLogin] = useState({isLoggedIn: false});
 
@@ -51,9 +51,9 @@ function App() {
                                         <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/about">About</Link></li>
                                         <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/dashboard">Dashboard</Link></li>
 
-                                        {hookLogin.isLoggedIn ? '' : <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/login">Login</Link></li>}
-                                        {hookLogin.isLoggedIn ? '' : <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/register">Register</Link></li>}
-                                        {hookLogin.isLoggedIn ? <li className="nav-item"><Link className="nav-link" onClick={() =>{handleHook(false)}}>Logout</Link></li> : ''}
+                                        {hookLogin.isLoggedIn || local ? '' : <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/login">Login</Link></li>}
+                                        {hookLogin.isLoggedIn || local ? '' : <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/register">Register</Link></li>}
+                                        {hookLogin.isLoggedIn || local ? <li className="nav-item"><Link className="nav-link" onClick={() =>{handleHook(false)}}>Logout</Link></li> : ''}
                                         <hr/>
                                     </ul>
                                     <div className='burger' onClick={handleBurger}>

@@ -4,8 +4,6 @@
     <list default="true" id="2990d9b4-1780-41f4-81f3-b93d5ceb3555" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/authCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authCheck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +124,7 @@
       <workItem from="1584463954017" duration="10775000" />
       <workItem from="1584569242259" duration="12786000" />
       <workItem from="1584628172584" duration="11660000" />
-      <workItem from="1584718307402" duration="1856000" />
+      <workItem from="1584718307402" duration="2245000" />
     </task>
     <servers />
   </component>
