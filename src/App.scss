@@ -341,7 +341,46 @@ footer {
   color: #ff6767;
   padding-left: 10px;
 }
+p.timeUntil {
+  background-color: #ff6767;
+  padding: 0px 10px 0px 5px;
+  font-weight: 300;
+  width: 115px;
+  color: #fff;}
 
+.eventHero {
+  width: 250px;
+  height: 132px;
+  background-size: auto 100%;
+  background-position: center;
+  object-fit: cover;
+}
+p.eventTitle {
+  font-weight: 400;
+  color: #505050;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+p.eventSubTitle {
+  font-weight: 300;
+  color: #505050;
+  margin: 0px;
+  font-weight: 400;
+  border-bottom: solid 1px #e2e2e2;
+}
+
+.eventWrap{
+  width: 250px;
+  padding: 0;
+  margin-right: 1.7em;
+  display: inline;
+  float: left;
+}
+.eventBtn{
+  width: 5%;
+  float: right;
+}
 @media screen and (max-width: 500px) {
 /* UNDER 500px CSS here */
   .hero h1 {
@@ -419,6 +458,25 @@ footer {
   .vid{
     width: 100%;
     height: 315px;
+  }
+  .eventWrap{
+    display: block;
+    float: none;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-bottom: 10px;
+  }
+  .eventBtn{
+    width: 30%;
+    margin-bottom: 20px;
+    float: none;
+  }
+  .tournament {
+    height: auto;
+  }
+  .bannerImage{
+    width: 100%;
   }
 }
 

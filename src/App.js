@@ -16,6 +16,8 @@ import search from "./components/search";
 import academyProfile from "./components/academyProfile";
 import affiliationProfile from "./components/affiliationProfile";
 import props from 'prop-types';
+import eventProfile from "./components/eventProfile";
+import EventDirectoy from "./components/eventDirectoy";
 
 
 function App() {
@@ -46,7 +48,7 @@ function App() {
                         <div className="row">
                             <div className="col-sm-12 stickyMenu">
                                 <nav className="navbar navbar-expand-lg navbar-light bg-light" >
-                                    <Link className="navbar-brand" to="/"><img src={logo} className="logo"/></Link>
+                                    <Link className="navbar-brand" to="/"><img src={logo} className="logo" onClick={handleLink}/></Link>
                                     <ul className="navbar-nav" style={{display: hook.isBurgerOpen && 'block' }}>
                                         <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/about">About</Link></li>
                                         <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/dashboard">Dashboard</Link></li>
@@ -73,6 +75,8 @@ function App() {
                         <Route path="/profile/:id" component={profile}/>
                         <Route path="/academy/:id" component={academyProfile}/>
                         <Route path="/affiliation/:id" component={affiliationProfile}/>
+                        <Route path="/event/:id" component={eventProfile}/>
+                        <Route path="/events/" component={EventDirectoy}/>
                         <Route path="/search/" component={search}/>
 
 

@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2990d9b4-1780-41f4-81f3-b93d5ceb3555" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/eventDirectoy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/eventProfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/getTournaments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tournaments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tournaments.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +130,9 @@
       <workItem from="1584463954017" duration="10775000" />
       <workItem from="1584569242259" duration="12786000" />
       <workItem from="1584628172584" duration="11660000" />
-      <workItem from="1584718307402" duration="2245000" />
+      <workItem from="1584718307402" duration="2844000" />
+      <workItem from="1584786225205" duration="1198000" />
+      <workItem from="1584915213234" duration="11239000" />
     </task>
     <servers />
   </component>
@@ -147,22 +155,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583849714196" />
-    <state width="1899" height="239" key="GridCell.Tab.0.bottom" timestamp="1584667724859">
+    <state width="1899" height="239" key="GridCell.Tab.0.bottom" timestamp="1584933364341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="239" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584667724859" />
-    <state width="1899" height="239" key="GridCell.Tab.0.center" timestamp="1584667724859">
+    <state width="1899" height="239" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584933364341" />
+    <state width="1899" height="239" key="GridCell.Tab.0.center" timestamp="1584933364341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="239" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584667724859" />
-    <state width="1899" height="239" key="GridCell.Tab.0.left" timestamp="1584667724859">
+    <state width="1899" height="239" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584933364341" />
+    <state width="1899" height="239" key="GridCell.Tab.0.left" timestamp="1584933364341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="239" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584667724859" />
-    <state width="1899" height="239" key="GridCell.Tab.0.right" timestamp="1584667724859">
+    <state width="1899" height="239" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584933364341" />
+    <state width="1899" height="239" key="GridCell.Tab.0.right" timestamp="1584933364341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="239" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584667724859" />
+    <state width="1899" height="239" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584933364341" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1581293331418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -219,10 +227,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="522" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1581255854615" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1584631348712">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1584930950748">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584631348712" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584930950748" />
     <state x="623" y="225" key="search.everywhere.popup" timestamp="1582899091098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

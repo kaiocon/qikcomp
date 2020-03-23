@@ -4,6 +4,7 @@ const check = '<svg aria-hidden="true" focusable="false" data-prefix="fas" data-
 class about extends React.Component {
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         document.title = "QikComp - Features";
 
 
