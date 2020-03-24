@@ -50,8 +50,9 @@ a:hover{
   font-size: 1.35em;
   font-weight: 100;
   line-height: 1;
-  text-align: center;
+  text-align: inherit;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 .card-text {
    color: #505050;
@@ -267,6 +268,7 @@ footer {
   color: #505050;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
 }
 .flag {
   width: 2.1em;
@@ -283,13 +285,13 @@ footer {
   padding: 0 16px;
   border: 0px;
   border-bottom: 2px solid #d7d7d8;
-  background-color: white;
+  background-color: #ff4646;
   color: #ffffff;
 }
 .card-title input:focus{
   outline: 0;
-  background-color: #fafafa;
-  border-bottom: 2px solid #89888a;
+  background-color: #ff4646;
+  border-bottom: 2px solid #fff;
 }
 .card-text p {
   margin-right: 2em;
@@ -381,6 +383,13 @@ p.eventSubTitle {
   width: 5%;
   float: right;
 }
+
+input[type="search"]::placeholder {
+  color: #fff;
+}
+input[type="search"]:active {
+  background-color: #ff4646;
+}
 @media screen and (max-width: 500px) {
 /* UNDER 500px CSS here */
   .hero h1 {
@@ -465,7 +474,6 @@ p.eventSubTitle {
     text-align: center;
     margin: auto;
     margin-bottom: 20px;
-    margin-bottom: 10px;
   }
   .eventBtn{
     width: 30%;

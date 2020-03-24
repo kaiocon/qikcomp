@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2990d9b4-1780-41f4-81f3-b93d5ceb3555" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/eventDirectoy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/eventProfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/getTournaments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tournaments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tournaments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/eventProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/eventProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +130,7 @@
       <workItem from="1584718307402" duration="2844000" />
       <workItem from="1584786225205" duration="1198000" />
       <workItem from="1584915213234" duration="11239000" />
+      <workItem from="1584974822520" duration="11220000" />
     </task>
     <servers />
   </component>
@@ -143,10 +141,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580140184118">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584982203569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580140184118" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584982203569" />
     <state x="585" y="117" key="CommitChangelistDialog2" timestamp="1581087156278">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -227,10 +225,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="522" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1581255854615" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1584930950748">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1584979682395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584930950748" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584979682395" />
     <state x="623" y="225" key="search.everywhere.popup" timestamp="1582899091098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

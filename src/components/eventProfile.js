@@ -2,6 +2,7 @@ import React from 'react';
 import Axios from "axios";
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import Geocode from "react-geocode";
+import GetCompetitors from "./getCompetitors";
 let url = '';
 
 class eventProfile extends React.Component {
@@ -72,11 +73,15 @@ class eventProfile extends React.Component {
 
                         </GoogleMap>
                     </LoadScript>
-                    <h5 className="card-title">Statistics</h5>
                     <div className="card-body">
-                        <p className="card-text">QikComp aims to be an online tournament management solution for point scoring/by submission combat sports such as Olympic rules Judo. Combat sports are a very popular in modern society and as such there exists completions for all level of athlete and all of which require a significant amount organisation from both event management and athletes. The project comprises the development of a mobile responsive web application capable of helping event organisers and competitors to deal with large information and scheduling tasks expected in such events.
-                        </p>
-                    </div></div>
+                        <span className="card-text">
+                            <p><span className='faded'>Address</span><br/> {this.state.address}</p>
+                            <p><span className='faded'>Phone</span><br/> <a href={'tel: +' + this.state.phoneNum}>{'+' + this.state.phoneNum}</a></p>
+                            <p><span className='faded'>Website</span><br/>  <a href={'http://'+this.state.website}>{this.state.website}</a></p>
+                            <p><span className='faded'>Info</span> <br/> {this.state.info}</p>
+                        </span>
+                    </div>
+                    <p style={{padding: '0em 1.25em'}}><span className='faded'>Team:</span><br/></p></div>
             </div>
         )
     }
