@@ -1,6 +1,6 @@
 import React from 'react';
 import Axios from "axios";
-class getCompetitors extends React.Component {
+class getMatchCompetitors extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -25,11 +25,11 @@ class getCompetitors extends React.Component {
 
     render() {
         return(
-            <span>
-               {this.state.competitors.map(competitor => <h6><a href={'/profile/' + competitor.data._id}><img src={competitor.data.profileImage} className='profileImage'/></a><a href={'/profile/' + competitor.data._id}>{competitor.data.firstName + ' ' + competitor.data.lastName}</a></h6>)}
-           </span>
+            <div className='match' >
+                {this.state.competitors.map(competitor => <div className='competitor'><a href={'/profile/' + competitor.data._id}><img src={competitor.data.profileImage} className='matchImage'/></a><a className='competitorName' href={'/profile/' + competitor.data._id}>{competitor.data.firstName + ' ' + competitor.data.lastName}</a></div>)}
+            </div>
         )
     }
 }
 
-export default getCompetitors;
+export default getMatchCompetitors;

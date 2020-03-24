@@ -390,6 +390,31 @@ input[type="search"]::placeholder {
 input[type="search"]:active {
   background-color: #ff4646;
 }
+.bannerImage {
+  width: 100%;
+  height: 280px;
+}
+.match {
+  height: 82px;
+  border: solid 1px #e2e2e2;
+  border-top: none;
+  width: 180px;
+
+}
+.matchWrap {
+  margin-top: 10px;
+  border: solid 1px #e2e2e2;
+  padding: 10px;
+}
+a.competitorName {
+  margin: 10px;
+}
+img.matchImage {
+  height: 40px;
+}
+.competitor {
+  border-top: solid 1px #e2e2e2;
+}
 @media screen and (max-width: 500px) {
 /* UNDER 500px CSS here */
   .hero h1 {

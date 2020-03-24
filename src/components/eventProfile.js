@@ -2,7 +2,7 @@ import React from 'react';
 import Axios from "axios";
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import Geocode from "react-geocode";
-import GetCompetitors from "./getCompetitors";
+import GetBrackets from "./getBrackets";
 let url = '';
 
 class eventProfile extends React.Component {
@@ -22,8 +22,8 @@ class eventProfile extends React.Component {
         url = '/event/' + this.props.match.params.id;
 
         Axios.get(url).then(res =>{
-            this.setState({ loading: false, name: res.data.name, address: res.data.address, info: res.data.info, eventStart: res.data.event , bannerImage: res.data.bannerImage});
-            document.title = "QikComp Event - " + this.state.name;
+            this.setState({ loading: false, name: res.data.name, address: res.data.address, info: res.data.info, eventStart: res.data.eventStart , bannerImage: res.data.bannerImage, email: res.data.email, competitorBrackets: res.data.competitorBrackets});
+            document.title = "QikComp Event - " + this.state.name.toUpperCase();
 
             Geocode.fromAddress(this.state.address).then(
                 response => {
@@ -49,13 +49,6 @@ class eventProfile extends React.Component {
             <div className="container mob">
                 <img src={this.state.bannerImage} className='bannerImage'/>
                 <h1 className='profileH1'>{this.state.name}</h1>
-                <div className='profile'>
-
-                    <h6>Nation: <strong></strong></h6>
-                    <h6>Age:  <strong></strong></h6><br/>
-                    <h6>Academy:  <br/></h6>
-
-                </div>
                 <div className="card" style={{margin: "20px"}}>
                     <LoadScript
                         id="script-loader"
@@ -76,12 +69,12 @@ class eventProfile extends React.Component {
                     <div className="card-body">
                         <span className="card-text">
                             <p><span className='faded'>Address</span><br/> {this.state.address}</p>
-                            <p><span className='faded'>Phone</span><br/> <a href={'tel: +' + this.state.phoneNum}>{'+' + this.state.phoneNum}</a></p>
-                            <p><span className='faded'>Website</span><br/>  <a href={'http://'+this.state.website}>{this.state.website}</a></p>
+                            <p><span className='faded'>Event Date</span><br/> {this.state.eventStart}</p>
+                            <p><span className='faded'>Email</span><br/>  <a href={'mailto:'+this.state.email}>{this.state.email}</a></p>
                             <p><span className='faded'>Info</span> <br/> {this.state.info}</p>
                         </span>
                     </div>
-                    <p style={{padding: '0em 1.25em'}}><span className='faded'>Team:</span><br/></p></div>
+                    <p style={{padding: '0em 1.25em'}}><span className='faded'>Brackets:<GetBrackets eventID={this.props.match.params.id}/></span><br/></p></div>
             </div>
         )
     }

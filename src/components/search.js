@@ -10,7 +10,7 @@ class search extends React.Component {
             profiles: [],
             results: []
             };
-        this.handleSearch = this.handleSearch.bind(this)
+        //this.handleSearch = this.handleSearch.bind(this)
     }
 
     componentDidMount() {

@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2990d9b4-1780-41f4-81f3-b93d5ceb3555" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/getBrackets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/getMatchCompetitors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/getMatches.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/eventProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/eventProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/getCompetitors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/getCompetitors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,6 +134,7 @@
       <workItem from="1584786225205" duration="1198000" />
       <workItem from="1584915213234" duration="11239000" />
       <workItem from="1584974822520" duration="11220000" />
+      <workItem from="1585051900722" duration="13238000" />
     </task>
     <servers />
   </component>
