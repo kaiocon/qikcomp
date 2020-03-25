@@ -5,6 +5,7 @@ import CreateAffiliation from "./createAffiliation";
 import CreateEvent from './createEvent';
 import props from 'prop-types';
 import {Link} from "react-router-dom";
+import GetDashAcadmies from "./getDashAcademies";
 let url = '';
 class dashboard extends React.Component {
 
@@ -85,10 +86,10 @@ class dashboard extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const {phoneNum, country, birthDate, profileImage} = this.state;
+        const {phoneNum, country, birthDate, profileImage, academy} = this.state;
 
 
-            Axios.put(url, {phoneNum, country, birthDate, profileImage}).then(result =>{
+            Axios.put(url, {phoneNum, country, birthDate, profileImage, academy}).then(result =>{
                 if (result.status === 200){
                     alert('Profile Updated!');
                     this.forceRefresh();
@@ -151,7 +152,7 @@ class dashboard extends React.Component {
                             <div className="form-group">
                                 <label className="col-md-3 control-label">Academy:</label>
                                 <div className="col-sm-6">
-                                    <input className="form-control" type="text" value={this.state.academy} disabled/>
+                                    <GetDashAcadmies default={this.state.academy} handleAcademies={(e) => this.setState({ academy: e.target.value })}/>
                                 </div>
                             </div>
                             <div className="form-group">

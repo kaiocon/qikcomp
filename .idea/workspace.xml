@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2990d9b4-1780-41f4-81f3-b93d5ceb3555" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/createBracket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/createEvent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/getDashAcademies.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/createAcademy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/createAcademy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/createAffiliation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/createAffiliation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/getAffiliations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/getAffiliations.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +132,7 @@
       <workItem from="1584915213234" duration="11239000" />
       <workItem from="1584974822520" duration="11220000" />
       <workItem from="1585051900722" duration="27192000" />
+      <workItem from="1585145668076" duration="1996000" />
     </task>
     <servers />
   </component>

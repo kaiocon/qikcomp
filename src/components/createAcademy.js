@@ -172,7 +172,7 @@ class createAcademy extends React.Component {
                                 <label className="col-md-3 control-label">Affiliation:</label>
                                 <div className="col-sm-6">
                                     <div className="ui-select">
-                                           <GetAffiliations  handleAffiliation={(e) => this.setState({ affiliation: e.target.value })}/>
+                                           <GetAffiliations default={this.state.affiliation} handleAffiliation={(e) => this.setState({ affiliation: e.target.value })}/>
                                     </div>
                                 </div>
                             </div>
