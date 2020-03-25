@@ -32,7 +32,7 @@ class createAffiliation extends React.Component {
         Axios.post('/createAffiliation', {name, about, profileImage}).then(result =>{
             if (result.status === 200){
                 alert('Affiliation Created!');
-                this.forceUpdate();
+                this.props.forceRefresh();
 
             }
             else{
@@ -54,7 +54,7 @@ class createAffiliation extends React.Component {
         Axios.put('/affiliation/' + this.props.managesAffiliation, {name, about, profileImage}).then(result =>{
             if (result.status === 200){
                 alert('Affiliation Updated!');
-
+                this.props.forceRefresh();
             }
             else{
                 alert('Error!');

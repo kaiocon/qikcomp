@@ -20,7 +20,7 @@ class createAcademy extends React.Component {
     }
 
     componentDidMount() {
-        if (this.props.manages != undefined){
+        if (this.props.manages !== undefined){
         let url = '/academy/' + this.props.manages;
 
         Axios.get(url).then(res =>{
@@ -39,8 +39,7 @@ class createAcademy extends React.Component {
         Axios.post('/createAcademy', {name, address, instructor, phoneNum, country, website, about, affiliation, profileImage}).then(result =>{
             if (result.status === 200){
                 alert('Academy Created!');
-                this.setState(this.state);
-
+                this.props.forceRefresh();
             }
             else{
                 alert('Error!');
@@ -61,7 +60,7 @@ class createAcademy extends React.Component {
         Axios.put('/academy/' + this.props.manages, {name, address, instructor, phoneNum, country, website, about, affiliation, profileImage}).then(result =>{
             if (result.status === 200){
                 alert('Academy Updated!');
-
+                this.props.forceRefresh();
             }
             else{
                 alert('Error!');

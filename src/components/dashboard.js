@@ -2,7 +2,7 @@ import React from 'react';
 import Axios from 'axios';
 import CreateAcademy from './createAcademy';
 import CreateAffiliation from "./createAffiliation";
-import Login from "./login";
+import CreateEvent from './createEvent';
 import props from 'prop-types';
 import {Link} from "react-router-dom";
 let url = '';
@@ -30,17 +30,31 @@ class dashboard extends React.Component {
     }
 
 
-    componentWillMount() {
+    componentDidMount() {
         url = '/users/' + this.props.user;
 
         Axios.get(url).then(res =>{
             //alert(res.data.email);
-            this.setState({ loading: false, email: res.data.email, firstName: res.data.firstName, lastName: res.data.lastName, phoneNum: res.data.phoneNum, country: res.data.country, academy: res.data.academy, birthDate: res.data.birthDate.substring(0,10), profileImage: res.data.profileImage, adminPermissions: res.data.adminPermissions, manages: res.data.manages, managesAffiliation: res.data.managesAffiliation});
+            this.setState({ loading: false, email: res.data.email, firstName: res.data.firstName, lastName: res.data.lastName, phoneNum: res.data.phoneNum, country: res.data.country, academy: res.data.academy, birthDate: res.data.birthDate.substring(0,10), profileImage: res.data.profileImage, adminPermissions: res.data.adminPermissions, manages: res.data.manages, managesAffiliation: res.data.managesAffiliation, eventManage: res.data.eventManage});
             Axios.get('/academy/' + this.state.academy).then(res =>{
                 this.setState({academy: res.data.name});
             })
             document.title = "QikComp Dashboard - " + this.state.firstName + ' ' + this.state.lastName;
         })
+    }
+
+    forceRefresh = () =>{
+        url = '/users/' + this.props.user;
+
+        Axios.get(url).then(res =>{
+            //alert(res.data.email);
+            this.setState({ loading: false, email: res.data.email, firstName: res.data.firstName, lastName: res.data.lastName, phoneNum: res.data.phoneNum, country: res.data.country, academy: res.data.academy, birthDate: res.data.birthDate.substring(0,10), profileImage: res.data.profileImage, adminPermissions: res.data.adminPermissions, manages: res.data.manages, managesAffiliation: res.data.managesAffiliation, eventManage: res.data.eventManage});
+            Axios.get('/academy/' + this.state.academy).then(res =>{
+                this.setState({academy: res.data.name});
+            })
+            document.title = "QikComp Dashboard - " + this.state.firstName + ' ' + this.state.lastName;
+        })
+
     }
 
     handleImage = (file) => {
@@ -77,7 +91,7 @@ class dashboard extends React.Component {
             Axios.put(url, {phoneNum, country, birthDate, profileImage}).then(result =>{
                 if (result.status === 200){
                     alert('Profile Updated!');
-
+                    this.forceRefresh();
                 }
                 else{
                     alert('Error!');
@@ -101,9 +115,10 @@ class dashboard extends React.Component {
 
             <div className="container mob">
             <div className="card" style={{margin: "20px"}}>
-                <h5 className="card-title"><Link to='#' onClick={() =>{this.setState({dash: true, acad: false, afil: false})}}>Dashboard</Link> | <Link to='#'  onClick={() =>{this.setState({dash: false, acad: true, afil: false})}}>Academy</Link>  | <Link to='#' onClick={() =>{this.setState({dash: false, acad: false, afil: true})}}>Affiliation</Link></h5>
-                {this.state.acad ? <CreateAcademy {...props} manages={this.state.manages}/> : ''}
-                {this.state.afil ? <CreateAffiliation {...props} managesAffiliation={this.state.managesAffiliation}/> : ''}
+                <h5 className="card-title"><Link to='#' onClick={() =>{this.setState({dash: true, acad: false, afil: false, even: false})}}>Dashboard</Link> | <Link to='#'  onClick={() =>{this.setState({dash: false, acad: true, afil: false, even: false})}}>Academy</Link>  | <Link to='#' onClick={() =>{this.setState({dash: false, acad: false, afil: true, even: false})}}>Affiliation</Link> | <Link to='#' onClick={() =>{this.setState({dash: false, acad: false, afil: false, even: true})}}>Event</Link></h5>
+                {this.state.even ? <CreateEvent {...props} manages={this.state.eventManage} forceRefresh={this.forceRefresh}/> : ''}
+                {this.state.acad ? <CreateAcademy {...props} manages={this.state.manages} forceRefresh={this.forceRefresh}/> : ''}
+                {this.state.afil ? <CreateAffiliation {...props} managesAffiliation={this.state.managesAffiliation} forceRefresh={this.forceRefresh}/> : ''}
                 {this.state.dash ? <div className="card-body">
                         <form className="profile" role="form" onSubmit={this.handleSubmit}>
                             <div className="form-group">

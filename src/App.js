@@ -53,6 +53,7 @@ function App() {
                                         <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/about">About</Link></li>
                                         <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/dashboard">Dashboard</Link></li>
                                         <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/search">Search</Link></li>
+                                        <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/events">Events</Link></li>
                                         {hookLogin.isLoggedIn || local ? '' : <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/login">Login</Link></li>}
                                         {hookLogin.isLoggedIn || local ? '' : <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/register">Register</Link></li>}
                                         {hookLogin.isLoggedIn || local ? <li className="nav-item"><Link className="nav-link" onClick={() =>{handleHook(false)}}>Logout</Link></li> : ''}
