@@ -14,7 +14,7 @@ class getMatchCompetitors extends React.Component {
         let competitors = this.props.competitors;
         let promises= [];
         for (let i = 0; i < competitors.length; i++) {
-            promises.push(Axios.get('/profile/' + competitors[i]))
+            if(competitors[i] !== 'OPENSPACE'){promises.push(Axios.get('/profile/' + competitors[i]))}
         }
 
         Promise.all(promises).then(res => console.log(this.setState({competitors: res})));

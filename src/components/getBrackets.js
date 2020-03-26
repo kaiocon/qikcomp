@@ -23,8 +23,11 @@ class getBrackets extends React.Component {
     render() {
         return(
             <span>
-               {this.state.brackets.map(bracket => <div className='bracketWrap'><p className='bracketName'> {bracket.bracketName}</p><p className='eventSubTitle'></p><GetMatches bracketID={bracket._id}/></div> )}
-           </span>
+ {this.state.brackets.map(bracket => {
+     if(localStorage.getItem('loginCookie') !== null){return <div className='bracketWrap'><p className='bracketName'> {bracket.bracketName}<a className="btn btn-primary regBtn" href={'/registerBracket/' + bracket._id}>Register</a></p><p className='eventSubTitle'></p><GetMatches bracketID={bracket._id}/></div>}
+     else{return <div className='bracketWrap'><p className='bracketName'> {bracket.bracketName}</p><p className='eventSubTitle'></p><GetMatches bracketID={bracket._id}/></div>}
+ })}
+            </span>
         )
     }
 }

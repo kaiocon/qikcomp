@@ -18,6 +18,7 @@ import affiliationProfile from "./components/affiliationProfile";
 import props from 'prop-types';
 import eventProfile from "./components/eventProfile";
 import EventDirectoy from "./components/eventDirectoy";
+import RegisterBracket from "./components/registerBracket";
 
 
 function App() {
@@ -56,7 +57,7 @@ function App() {
                                         <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/events">Events</Link></li>
                                         {hookLogin.isLoggedIn || local ? '' : <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/login">Login</Link></li>}
                                         {hookLogin.isLoggedIn || local ? '' : <li className="nav-item"><Link className="nav-link" onClick={handleLink} to="/register">Register</Link></li>}
-                                        {hookLogin.isLoggedIn || local ? <li className="nav-item"><Link className="nav-link" onClick={() =>{handleHook(false)}}>Logout</Link></li> : ''}
+                                        {hookLogin.isLoggedIn || local ? <li className="nav-item"><Link className="nav-link" onClick={() =>{handleHook(false)}} to='#'>Logout</Link></li> : ''}
                                         <hr/>
                                     </ul>
                                     <div className='burger' onClick={handleBurger}>
@@ -79,7 +80,7 @@ function App() {
                         <Route path="/event/:id" component={eventProfile}/>
                         <Route path="/events/" component={EventDirectoy}/>
                         <Route path="/search/" component={search}/>
-
+                        <Route path="/registerBracket/:id" {...props} component={RegisterBracket}/>
 
                         <Route path="/" exact component={Home} />
                         <Route path="*" component={notFound} />

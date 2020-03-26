@@ -422,6 +422,11 @@ img.matchImage {
 .competitor {
   border-top: solid 1px #e2e2e2;
 }
+.regBtn{
+  width: 10%;
+  float: right;
+  text-transform: capitalize;
+}
 @media screen and (max-width: 500px) {
 /* UNDER 500px CSS here */
   .hero h1 {
@@ -512,6 +517,7 @@ img.matchImage {
     margin-bottom: 20px;
     float: none;
   }
+
   .tournament {
     height: auto;
   }
