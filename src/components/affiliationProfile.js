@@ -13,7 +13,6 @@ class affiliationProfile extends React.Component {
             name: '',
             profileImage: '',
             about: '',
-            competitors: '',
             academies: '',
         };
     }
@@ -23,7 +22,7 @@ class affiliationProfile extends React.Component {
 
         Axios.get(url).then(res =>{
             //alert(res.data.email);
-            this.setState({ loading: false, name: res.data.name, profileImage: res.data.profileImage, about: res.data.about, competitors: res.data.competitorCount, academies: res.data.academies});
+            this.setState({ loading: false, name: res.data.name, profileImage: res.data.profileImage, about: res.data.about, academies: res.data.academies});
             document.title = "QikComp Affiliation Profile - " + this.state.name;
 
 
@@ -44,7 +43,7 @@ class affiliationProfile extends React.Component {
                 <img src={this.state.profileImage} className='profileImage2'/>
                 <h1 className='profileH1'>{this.state.name}</h1>
                 <div className='profile'>
-                    <h6>Competitors:  <strong>{this.state.competitors}</strong></h6>
+                    <h6>Academies:  <strong>{this.state.academies.length}</strong></h6>
 
                 </div>
                 <div className="card" style={{margin: "20px"}}>

@@ -369,7 +369,6 @@ p.eventSubTitle {
   color: #505050;
   margin: 0px;
   font-weight: 400;
-  border-bottom: solid 1px #e2e2e2;
 }
 
 .eventWrap{
@@ -412,6 +411,7 @@ img.bannerProfile {
 p.bracketName {
   text-transform: uppercase;
   font-weight: 500;
+  margin-bottom: 30px;
 }
 a.competitorName {
   margin: 10px;
@@ -426,6 +426,9 @@ img.matchImage {
   width: 10%;
   float: right;
   text-transform: capitalize;
+}
+.bracketWrap {
+  margin-bottom: 50px;
 }
 @media screen and (max-width: 500px) {
 /* UNDER 500px CSS here */
@@ -523,6 +526,14 @@ img.matchImage {
   }
   .bannerImage{
     width: 100%;
+  }
+  .regBtn{
+    width: auto;
+    float: none;
+  }
+  p.bracketName{
+    text-align: center;
+    font-size: 1.2em;
   }
 }
 

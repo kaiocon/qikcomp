@@ -1,7 +1,22 @@
 import React from 'react';
 import Axios from "axios";
+import Doughnut  from 'react-chartjs-2';
 let url = '';
-
+const data = {
+    datasets: [{
+        data: [1, 2, 3],
+        backgroundColor: [
+            'rgba(80,80,80)',
+            'rgba(70,127,255)',
+            'rgba(255,70,70)',
+        ]
+    }],
+    labels: [
+        'Draws',
+        'Loses',
+        'Wins'
+    ]
+};
 class profile extends React.Component {
     constructor(props) {
         super(props);
@@ -48,10 +63,9 @@ class profile extends React.Component {
 
                 </div>
                 <div className="card" style={{margin: "20px"}}>
-                    <h5 className="card-title">Statistics</h5>
+                    <h5 className="card-title">Win Statistics</h5>
                     <div className="card-body">
-                        <p className="card-text">QikComp aims to be an online tournament management solution for point scoring/by submission combat sports such as Olympic rules Judo. Combat sports are a very popular in modern society and as such there exists completions for all level of athlete and all of which require a significant amount organisation from both event management and athletes. The project comprises the development of a mobile responsive web application capable of helping event organisers and competitors to deal with large information and scheduling tasks expected in such events.
-                        </p>
+                        <p className="card-text"><Doughnut data={data} /></p>
                     </div></div>
             </div>
         )
